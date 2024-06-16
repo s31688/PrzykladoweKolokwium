@@ -1,27 +1,9 @@
-public abstract class Car {
-    private String ID;
-    private int capacity;
-    private int maxWeight;
+public interface Car {
+    String getID();
 
-    public Car(String ID, int capacity, int maxWeight) {
-        this.ID = ID;
-        this.capacity = capacity;
-        this.maxWeight = maxWeight;
-    }
+    int getCapacity();
 
-    public String getID() {
-        return this.ID;
-    }
+    int getMaxWeight();
 
-    public int getCapacity() {
-        return this.capacity;
-    }
-
-    public int getMaxWeight() {
-        return this.maxWeight;
-    }
-
-    public void setMaxWeight(int maxWeight) {
-        this.maxWeight = maxWeight;
-    }
+    void setMaxWeight(int maxWeight);
 }
