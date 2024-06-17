@@ -8,9 +8,17 @@ public class Main {
 
         train.addCar(freightCar1);
         train.addCar(liquidCar1);
+
+        train.removeCar(liquidCar1.getID());
+
         train.addCar(refrigeratedCar1);
         train.loadCargo(10000, false, false);
         train.loadCargo(10000, true, false);
         train.loadCargo(5000, false, false);
+
+        for (Car c : train.getCars()) {
+            System.out.println(c.getClass().getName() + ", " + c.getID() + ", " + c.getMaxWeight() + ", "
+                    + c.getCapacity());
+        }
     }
 }

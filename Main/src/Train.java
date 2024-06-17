@@ -62,7 +62,7 @@ public class Train {
                 return car;
             }
         }
-        return null;
+        throw new IllegalArgumentException("Car does not exist");
     }
 
     public void loadCargo(int weight, boolean isLiquid, boolean isToxic) {
